@@ -1,6 +1,11 @@
 const meow = new Audio("deep-ass-meow.mp3")
 var clicks = 0;
-var points_amount = 0;
+if (localStorage.getItem("points") !== null){
+    var points_amount = localStorage.getItem("points");
+} else {
+    var points_amount = 0;
+}
+
 var pointMutliplier = 2;
 var muliplierChance = 10;
 const buttonsElement = document.querySelectorAll(".meowButton")
@@ -22,6 +27,7 @@ function pointIncrease(){
     points_amount = points_amount + Gains;
     console.log("amount of HDHQ points: "+ points_amount);
     valChange(points_amount)
+    localStorage.setItem("points", points_amount);
     return points_amount;
 }
 function earnedPoints(){
