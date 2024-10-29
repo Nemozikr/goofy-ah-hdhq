@@ -1,7 +1,7 @@
 const meow = new Audio("deep-ass-meow.mp3")
 var clicks = 0;
 if (localStorage.getItem("points") !== null){
-    var points_amount = localStorage.getItem("points");
+    var points_amount = parseInt(localStorage.getItem("points"), 10);
 } else {
     var points_amount = 0;
 }
