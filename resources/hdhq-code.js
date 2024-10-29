@@ -1,13 +1,14 @@
 const meow = new Audio("deep-ass-meow.mp3")
 var clicks = 0;
 if (localStorage.getItem("points") !== null){
+    console.log(`The points are: ${localStorage.getItem("points")}`)
     var points_amount = parseInt(localStorage.getItem("points"), 10);
 } else {
-    var points_amount = 0;
+    var points_amount = parseInt("0", 10;
 }
-
 var pointMutliplier = 2;
 var muliplierChance = 10;
+
 const buttonsElement = document.querySelectorAll(".meowButton")
 buttonsElement.forEach((buttonElement) => {
     buttonElement.addEventListener("click", hdhqClick(this.id))
